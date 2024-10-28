@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace HelloWorld
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+		  Console.Write("Enter a number: ");
+			string num = Console.ReadLine();
+			string numa = (Int32.Parse(num) * Int32.Parse(num)).ToString();
+			int total = 0;
+		  for (int i = 0; i<numa.Length; i++) {
+		    total += Int32.Parse(Char.ToString(numa[i]));
+		  }
+		  if (Int32.Parse(num)==total) {
+		    Console.WriteLine(num.ToString() + " is a Kaprekar number");
+		  }
+		}
+	}
+}
