@@ -10,14 +10,16 @@ namespace HelloWorld
 		public static void Main(string[] args)
 		{
 		  Console.Write("Enter a number: ");
-			string num = Console.ReadLine();
-			string numa = (Int32.Parse(num) * Int32.Parse(num)).ToString();
-			int total = 0;
-		  for (int i = 0; i<numa.Length; i++) {
-		    total += Int32.Parse(Char.ToString(numa[i]));
+		  string num = Console.ReadLine();
+		  string numa = (Int32.Parse(num) * Int32.Parse(num)).ToString(); // squares original number
+		  int total = 0;
+		  for (int i = 0; i<numa.Length; i++) { // iterates through the number (as a string)
+		    total += Int32.Parse(Char.ToString(numa[i])); // Sums up digits one by one
 		  }
-		  if (Int32.Parse(num)==total) {
+		  if (Int32.Parse(num)==total) { // checks if sum of digits equals original number
 		    Console.WriteLine(num.ToString() + " is a Kaprekar number");
+		  } else {
+		    Console.WriteLine(num.ToString() + " is not a Kaprekar number");
 		  }
 		}
 	}
